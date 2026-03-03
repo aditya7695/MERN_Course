@@ -65,6 +65,6 @@
 
 // let message=(age) ? (age>=18) ? "you can vote" : "you cannot vote " : "not valid input";console.log(message);
 
-let score = 80;
-let message = score>=90 ? "Grade A" : score>=80 ? "Grade B" : score>=70 ? "Grade C" : score>=60 ? "Grade D" : "Grade F";
-console.log(message);
+// let score = 80;
+// let message = score>=90 ? "Grade A" : score>=80 ? "Grade B" : score>=70 ? "Grade C" : score>=60 ? "Grade D" : "Grade F";
+// console.log(message);
