@@ -17,25 +17,25 @@ for(let i=0;i<fruits1.length;i++){
     
 }
 console.log(fruits2);
-
  */
-// let arr=[];
-// function EvenArr(arr){
-//     for(let i=1;i<=10;i++){
-//         if(i%2==0){
-//          arr.push(i);
-//         }
-//     }
-//     console.log(arr);
-// }
-// EvenArr(arr);
+
+let arr=[];
+function EvenArr(arr){
+    for(let i=1;i<=10;i++){
+        if(i%2==0){
+         arr.push(i);
+        }
+    }
+    console.log(arr);
+}
+EvenArr(arr);
 ///////////////////////////////POP///////////////////////////////////
 // let arr=[1,2,3,4,5,6];
 // arr.pop();
 // console.log(arr);
 
-let arr=[1,2,3,4,5]
+/* let arr=[1,2,3,4,5]
 for(let i=0;i<arr.length;i++){
     arr.pop();
 }
-console.log(arr);
+console.log(arr); */

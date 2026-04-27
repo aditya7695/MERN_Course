@@ -38,13 +38,20 @@ for (let i=2 ; i<=num ; i++){
     }
 } */
 
-const students = [
+/* const students = [
     {name : "Amit" , math : 80 , science : 82 , english : 90},
     {name : "Sneha" , math : 88 , science : 75 , english : 86 },
     {name : "Ravi" , math : 92 , science : 90 , english : 85 }
 ]
 function abc(students){
     for (let i=0 ; i < students.length ; i++){
-        let to
+        let name=students[i].name;
+        let total = students[i].math + students[i].science + students[i].english;
+        let average = total / 3;
+        console.log(`${name}-> Total : ${total} , Average : ${average.toFixed(2)}`);
+ 
     }
 }
+abc(students);
+ */
+
