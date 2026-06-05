@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box-container{
+            border: 2px solid black;
+            display: flex;
+            /* gap: 20px; */
+            height: 500px;
+            /* align-items: center; */
+            width: 100%;
+            flex-wrap: wrap;
+
+            /* flex-direction: column; */
+            /* flex in css is used for arranging element in row or column and controlling the spacing and of this element  */
+            /* w/o flex arranging items in the page requires a lot of extra cssssssssssssssssssssssssssssssssssssssssssss  */
+            
+            /* justify-content: center;  Items at the center*/ 
+            /* justify-content: start;  Items at Begining*/
+            /* justify-content: end;  Items at End*/
+            /* justify-content: space-between;  Spreads across the axis*/
+            /* justify-content: space-around;  Spreads across the axis with even spaces everywhere*/
+            /* justify-content: space-evenly;  Spreads across the axis with even spaces in between and some at the edges*/
+
+            /* align-items: center;  */
+            /* align-items: end; */
+            /* align-items: start; */
+
+            /* align-items : align items in cross axis */
+
+            /* To center a div there are three main things 
+            1. display = flex
+            2.justify-content = centere 
+            3.align-items. = center */
+
+            /* justify-content: center; */
+        }
+        .box{
+            background-color: purple;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            height: fit-content;
+            width: fit-content;
+            flex-grow: 1;
+        }
+        /* .special{
+            align-self: end;
+        } */
+    </style>
+</head>
+<body>
+    <div class="box-container">
+        <div class="box">Box1</div>
+        <div class="box special">Box2</div>
+        <div class="box">Box3</div>
+    </div>
+</body>
+</html>

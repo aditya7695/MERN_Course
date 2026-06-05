@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 300px;
+            width: 300px;
+            background-color: orange;
+            padding: 20px;
+            border: 5px solid black;
+            /* margin: 20px; */
+            box-sizing: border-box;
+        }
+        /* button{
+            font-size: 20px;
+            font-weight: 600;
+            border-radius: 10%;
+            padding: 20px;
+        } */
+        .box2{
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            border: 5px solid black;
+            box-sizing: border-box;
+        }
+        .box3{
+            height: 300px;
+            width: 300px;
+            background-color: pink;
+            display: inline-block;
+            /* Display Block
+                - starts on a new line , takes full width by default ,
+                width and height can be set*/
+
+            /* Display Inline 
+               - stays in a same line width and height does not apply 
+               used for short peice of text */
+
+            /* Display Inline-block
+               -  */
+        }
+        .parent{
+            height: 300px;
+            width: 300px;
+            background-color: brown;
+            position: relative;
+            top: 200px;
+            left: 450px;
+        }
+        .child{
+            background-color: pink;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            top: 90px;
+            left: 90px;;
+        }
+        /* Position Static - default value element stays in a normal position */
+        /* Position relative - element move relative to its normal position  */
+        /* Position absolute - elements moves relative to its nearest parent (Original Space is removed) */
+        /* Position fixed - stays on the same place while scrolling */
+        /* Position Stickey - scrolls to  a fixed position while scrolling */
+
+        :root{
+            --primary-color : #007bff;
+            --text-color : #000000;
+
+        }
+        button{
+            background-color: var(--primary-color);
+            position: relative;
+            top: 38px;
+            left: 15px;
+        }
+    </style>
+</head>
+<body> 
+    <!-- <div class="box"></div> -->
+    <!-- <button>Click me</button>   -->
+    <!-- <div class="box2"></div> -->
+    <!-- <div class="box3">Hello</div> -->
+    <!-- <div class="box3">Hello</div> -->
+     <div class="parent">
+        <div class="child">
+            <button>Click Me</button>
+        </div>
+     </div>
+     
+</body>
+</html>

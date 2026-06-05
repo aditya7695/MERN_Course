@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .card{
+            padding:16px ;
+            border-radius: 8px;
+            border: 1px solid black;
+            background-color: #f9f9f9;
+        }
+        .card h1{
+            margin-top: 0px;
+        }
+        @media(min-width:768px){
+            .container{
+                flex-direction: row;
+            }
+            .card{
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>CArd 1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt blanditiis vel sapiente modi excepturi exercitationem velit, deleniti vitae quisquam doloribus magni, unde harum adipisci voluptatum aperiam autem delectus recusandae obcaecati?</p>
+       </div>
+            <div class="card">
+            <h1>CArd 2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ducimus sequi corporis reprehenderit, temporibus officiis porro alias obcaecati omnis illo quae cupiditate molestias laudantium, minima facere consequatur autem delectus quisquam?</p>
+    </div>
+</body>
+</html>

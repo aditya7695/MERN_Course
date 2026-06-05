@@ -151,7 +151,7 @@ console.log(freqMap); */
 
 // // Method 2 (ideal)
 
-// let set2 = new Set(username);
-// console.log(set2);
-// console.log([...set2]);
+let set2 = new Set(username);
+console.log(set2);
+console.log([...set2]);
 

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            padding: 40px;
+            font-style: 24px;
+            background-color: orange;
+            color: white;
+        }
+        @media(min-width:425px){
+            .box{
+                background-color: aqua;
+            }
+        }
+        @media(min-width:768px){
+            .box{
+                background-color: greenyellow;
+            }
+        }
+        @media(min-width:1024px){
+            .box{
+                background-color: burlywood;
+            }
+            h1{
+                font-size: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Resizing the window to see the color change</div>
+    <h1>Heading</h1>
+</body>
+</html>

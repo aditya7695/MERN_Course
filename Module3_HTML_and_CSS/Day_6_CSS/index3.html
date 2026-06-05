@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+            height: 50px;
+            grid-template-areas: 
+            "one one"
+            "two three"
+            "empty four"
+            ;
+        }
+        .col{
+            background: rgb(60, 60, 194);
+            color: aliceblue;
+            padding: 20px;
+            border-radius: 12px;
+            border: 10px solid black;
+        }
+        .one{
+           grid-area: one;
+        }
+        .two{
+            grid-area: two;
+        }
+        .three{
+            grid-area: three;
+        }
+        .four{
+            grid-area: four;
+        }
+        .empty{
+            grid-area: empty;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col one">One</div>
+        <div class="col two">Two</div>
+        <div class="col three">Three</div>
+        <div class="col four">Four</div>
+        <div class="empty"></div>
+    </div>
+</body>
+</html>

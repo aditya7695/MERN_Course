@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dashboard{
+            display: grid;
+            gap: 10px;
+            height: 400px;
+            grid-template-columns: 200px 200px 200px;
+            /* grid-template-columns: 1fr 1fr 2fr; */
+            /* grid-template-columns: repeat(5,100px); */
+            /* grid-template-columns: minmax(200px , 1fr) 1fr 1fr; */
+
+            /* grid-template-rows: 100px 100px; */
+            /* grid-template-rows: 1fr 2fr; */
+            /* grid-template-rows: 70px 1fr; */
+
+            grid-template-areas:
+            "top top"
+            "side main"
+            "side stats"
+            "footer footer" 
+            ;
+
+
+
+
+
+        }
+        .top{background-color: orange;
+        grid-area: top;}
+        .side{background-color: orange;
+        grid-area: side;}
+        .main{background: blue;
+        grid-area: main;}
+        .stats{background-color: green;
+        grid-area: stats;}
+        .footer{background-color: green;
+        grid-area: footer;}
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="top">Top</div>
+        <div class="side">Side</div>
+        <div class="main">Main</div>
+        <div class="stats">Stats</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

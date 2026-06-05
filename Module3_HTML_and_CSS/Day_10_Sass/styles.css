@@ -1,0 +1,53 @@
+.box {
+  background-color: orange;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .innerbox {
+  background-color: aliceblue;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .innerbox .innerinnerbox {
+  background-color: orange;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .innerbox .innerinnerbox .a3 {
+  background-color: aliceblue;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .innerbox .innerinnerbox .a3 .a4 {
+  background-color: orange;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .innerbox .innerinnerbox .a3 .a4 .a5 {
+  background-color: aliceblue;
+  height: 10px;
+  width: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#text {
+  background-color: aqua;
+  color: blue;
+}/*# sourceMappingURL=styles.css.map */

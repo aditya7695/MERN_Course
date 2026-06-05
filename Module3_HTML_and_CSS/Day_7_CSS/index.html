@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Decendent selector be careful when you use */
+        .card p{
+            color: aqua;
+        }
+
+        /* Child selector - target direct children */
+
+        #container > p{
+            font-weight: bold;
+        }
+
+        /* adjacent sibling : first p after h3 */
+
+        h3 + p{
+            color: purple;
+        }
+
+        /* target all the next siblings */
+
+        h3 ~ p{
+            border-left: 5px solid grey;
+            padding-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <h2>Combinators</h2>
+        <div class="card">
+            <h3>Card Title</h3>
+            <p>Crad discription inmside</p>
+            <button class="primary-btn">Action</button>
+        </div>
+        <div class="card">
+            <h3>Another card</h3>
+            <p>More content</p>
+            <button>Secondary Action</button>
+        </div>
+        <p>Para outside card</p>
+
+        <h3>Heading 3 tag</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia iste magnam iure, facilis quidem quos reiciendis quae dolorem asperiores possimus ipsa aut ea placeat magni omnis, blanditiis temporibus voluptatem ipsam!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia iste magnam iure, facilis quidem quos reiciendis quae dolorem asperiores possimus ipsa aut ea placeat magni omnis, blanditiis temporibus voluptatem ipsam!</p>
+        
+        <h3>Heading 3 tag</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia iste magnam iure, facilis quidem quos reiciendis quae dolorem asperiores possimus ipsa aut ea placeat magni omnis, blanditiis temporibus voluptatem ipsam!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia iste magnam iure, facilis quidem quos reiciendis quae dolorem asperiores possimus ipsa aut ea placeat magni omnis, blanditiis temporibus voluptatem ipsam!</p>
+
+    </section>
+</body>
+</html>

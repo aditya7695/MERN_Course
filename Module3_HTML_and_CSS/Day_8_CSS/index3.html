@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navbar{
+            background-color: black;
+            color: aliceblue;
+            border-radius: 8px;
+            border: 2px solid black;
+            padding: 10px;
+        }
+        @media(min-width:500px){
+            .navbar{
+                display: flex;
+                justify-content: space-between;
+            }
+            .other-content{
+                display: flex;
+                flex-direction: row;
+                gap: 15px;
+
+            }
+    
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            LOGO
+        </div>
+        <div class="other-content">
+            <div class="about">
+                About
+            </div>
+            <div class="feature">
+                Feature
+            </div>
+            <div class="contact">
+                contact
+            </div>
+        </div>
+    </div>
+</body>
+</html>

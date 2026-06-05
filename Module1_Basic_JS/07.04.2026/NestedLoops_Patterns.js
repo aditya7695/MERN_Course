@@ -5,9 +5,9 @@ for (let i=0 ; i<n ; i++){
         row += " * ";
     }
     console.log(row);
-}
+} */
 
- */
+
 
 /* let n=4;
 let row="";
@@ -28,10 +28,10 @@ for (let i=0 ; i<n ; i++){
 } */
 
 
-/*  let n=5;
+ /* let n=5;
 for (let i=0 ; i<n ; i++){
     let row="";
-    for (let j=0 ; j<n-i ; j++){
+    for (let j=i ; j<n ; j++){
         row +=" ";
     }
     for (let z=0 ; z<i ; z++){
@@ -42,10 +42,10 @@ for (let i=0 ; i<n ; i++){
 
 
   ////////............ PYRAMID PATTERN.............////////////
-//  let n=4;
-/* for (let i=1 ; i<4 ; i++){
+/* let n=4;
+for (let i=1 ; i<=4 ; i++){
     let row="";
-    for (let j=1 ; j<=4-i ; j++){
+    for (let j=1 ; j<=n-i ; j++){
         row +=" ";
     }
     for (let z=1 ; z<=i ; z++){
@@ -53,8 +53,8 @@ for (let i=0 ; i<n ; i++){
     }
   console.log(row);
 }
-
  */
+
 
 /// METHOD 2
 

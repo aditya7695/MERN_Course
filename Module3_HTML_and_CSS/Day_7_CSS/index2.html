@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* basic attribute value */
+        input[placeholder]{
+            border: 3px solid black;
+        }
+        /* Specefic attribute value */
+        input[type="email"]{
+            border-color: red;
+        }
+        /* starts with (^) */
+        a[href^="https"]{
+            color: greenyellow;
+        }
+
+        /* ends with ($) */
+        a[href$=".com"]{
+            text-decoration: dashed;
+        }
+
+        li[data-level*= "advance"]{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <section id="attribute-selectors">
+        <h2>Attribute Selectors</h2>
+        <a href="https://assumenda.com">External link</a>
+        <a href="/about">Internal About</a>
+        <a href="mailto:hello@gmail.com">mail</a>
+
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <input type="password" placeholder="your password">
+
+        <ul>
+            <li data-level="beginner">HTML</li>
+            <li data-level="intermediate">CSS</li>
+            <li data-level="advance">JS</li>
+        </ul>
+
+
+    </section>
+</body>
+</html>
