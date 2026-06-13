@@ -127,7 +127,7 @@ box.addEventListener('mouseout',()=>{
 
 let btn = document.querySelector('#theme-toogle')
 let body = document.querySelector('body')
-btn.addEventListener('click',(e)=>{
+btn.addEventListener('click',()=>{
  body.classList.toggle('dark-theme')
  if(btn.textContent == "Dark"){
     btn.textContent = "Light"
