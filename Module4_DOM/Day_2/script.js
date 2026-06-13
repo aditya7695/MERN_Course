@@ -94,10 +94,10 @@ for(let i=0 ; i<fruits.length ; i++){
  */
 
 let users = [
-    {id:1, name:"pranav"},
-    {id:2, name:"sourav"},
-    {id:3, name:"aditya"},
-    {id:4, name:"prajwal"},
+    {id:15657, name:"pranav"},
+    {id:246546, name:"sourav"},
+    {id:3465456, name:"aditya"},
+    {id:4454646, name:"prajwal"},
 ]
 
 let table = document.querySelector('table');
@@ -118,16 +118,35 @@ table.appendChild(tr)
 
 users.map((items)=>{
     let tr = document.createElement('tr');
+    tr.style.border = '1px solid black' 
     let td1 = document.createElement('td');
+    td1.style.border = '1px solid black'
     td1.textContent = items.id
     let td2 = document.createElement('td');
+    td2.style.border = '1px solid black'
     td2.textContent = items.name
 
     tr.appendChild(td1)
     tr.appendChild(td2)
     table.appendChild(tr)
 })
+table.style.border = '1px solid black'
+
+
 
 
 
 console.log(table);
+
+let ul = document.querySelector('ul')
+let select = document.querySelector('#select')
+let li = document.createElement('li')
+let p = document.createElement('p')
+li.textContent = 'Banana'
+p.textContent = 'Fruits'
+// ul.append(li) // adds at the end
+ul.prepend(li) // adds at the start
+ul.before(p) //before sibling element
+// ul.after(p) //after sibling element
+
+ul.remove() // Deletion of an element in dom
