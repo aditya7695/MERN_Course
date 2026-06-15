@@ -101,21 +101,14 @@ let users = [
 ]
 
 let table = document.querySelector('table');
-
 let tr = document.createElement('tr')
-
 let th1 = document.createElement('th')
-
 th1.textContent = "id";
-
 let th2 = document.createElement('th')
-
 th2.textContent = "name";
-
 tr.appendChild(th1);
 tr.appendChild(th2);
 table.appendChild(tr)
-
 users.map((items)=>{
     let tr = document.createElement('tr');
     tr.style.border = '1px solid black' 
@@ -131,11 +124,6 @@ users.map((items)=>{
     table.appendChild(tr)
 })
 table.style.border = '1px solid black'
-
-
-
-
-
 console.log(table);
 
 let ul = document.querySelector('ul')
