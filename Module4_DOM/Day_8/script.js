@@ -124,3 +124,40 @@ const acc1 = new BankAccount("Aditya",10000)
 let deposit1 = BankAccount.deposit.bind(acc1)
 deposit1(1000)
 console.log(deposit1);
+// function Car(brand,model){
+//     this.brand=brand;
+//     this.model=model;
+// }
+
+// Car.prototype.displayInfo = function(){
+//     return this.brand + " " + this.model
+// }
+
+// let car1 = new Car("Tata","Tiago")
+// console.log(car1.displayInfo());
+// let car2 = new Car("Tata","Safari")
+// console.log(car2.displayInfo());
+// let car3 = new Car("Tata","Harrier")
+// console.log(car3.displayInfo());
+// let car4 = new Car("Tata","Sierra")
+// console.log(car4.displayInfo());
+
+// console.log(car1.displayInfo);
+
+function Animal(name){
+    this.name =name;
+    this.species = "Generic species"
+}
+
+Animal.prototype.makeSound = function(){
+    return this.name + " makes bhu bhu sound";
+}
+Animal.prototype.setAge = function(value){
+    this.age = value
+}
+
+let dog = new Animal("Buddy")
+
+console.log(dog.makeSound());
+dog.setAge(15);
+console.log(dog.age);
