@@ -127,32 +127,94 @@
 // phone1.call()
 
 
-class Phone{
-    #price
-    constructor(brand,price) {
-        this.brand = brand
-        this.#price = price;
-    }
-    call(){
-        console.log(`${this.brand} calling you`);
-    }
-    getPrice(){
-        return this.#price
+// class Phone {
+//   #price;
+//   constructor(brand, price) {
+//     this.brand = brand;
+//     this.#price = price;
+//   }
+//   call() {
+//     console.log(`${this.brand} calling you`);
+//   }
+//   getPrice() {
+//     return this.#price;
+//   }
+// }
+
+// class SmartPhone extends Phone {
+//   constructor(brand, price) {
+//     super(brand, price);
+//   }
+//   photo() {
+//     console.log(`${this.brand} take photo`);
+//     console.log(`price of the phone is ${this.getPrice()}`);
+//   }
+// }
+
+// const phone1 = new SmartPhone("Apple", 50000);
+// phone1.photo();
+// phone1.call();
+
+
+// Abstraction
+
+// class CoffeeMachine{
+//     #boilWater()
+//     {
+//         console.log("Water is boiling");
+//     }
+//     #brew()
+//     {
+//         console.log("brewing");
+//     }
+//     makeCoffee(){
+//         this.#boilWater()
+//         this.#brew()
+//         console.log("Coffee is ready");
+//     }
+// }
+
+// const machine = new CoffeeMachine();
+// machine.makeCoffee()
+
+// Polymorphism - Method overriding
+
+// class Animal{
+//     makeSound(){
+//         console.log("Some Sound");
+//     }
+// }
+// class Dog extends Animal{
+//     makeSound(){
+//         console.log("Bhu bhuuu");
+//     }
+// }
+// class Cat extends Animal{
+//     makeSound(){
+//         console.log("Meowww");
+//     }
+// }
+
+
+// const dog = new Dog()
+// dog.makeSound()
+
+// const cat = new Cat()
+// cat.makeSound()
+
+
+class Vehicle{
+    start(){
+        console.log("Engine is starting");
     }
 }
 
-class SmartPhone extends Phone{
-    constructor(brand,price){
-        super(brand,price);
-    }
-    photo(){
-        console.log(`${this.brand} take photo`);
-        console.log(`price of the phone is ${this.getPrice()}`);
+class Car extends Vehicle{
+    start(){
+        super.start();
+        console.log("Car is ready to run");
     }
 }
 
-const phone1 = new SmartPhone("Apple",50000);
-phone1.photo()
-phone1.call()
-
-
+const car = new Car()
+car.start()
