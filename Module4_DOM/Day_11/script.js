@@ -1,5 +1,7 @@
 // //  Local storage
 
+
+
 // // LocalStorage --> its a browser storage given to a website that allows 
 // // persistant key value pairs with no expiration time
 // // the data survives when the broser restarts and it is accessible accross all 
@@ -88,4 +90,38 @@
 
 // note :  both local and session storage can survive the reload
 
-sessionStorage.setItem('name','aditya')
+// sessionStorage.setItem('name','aditya')
+
+const nameof = document.querySelector('input[name="name"]');
+const age = document.querySelector('input[name="age"]');
+const description = document.querySelector('input[name="des"]');
+nameof.value = JSON.parse(localStorage.getItem('name'))
+age.value = JSON.parse(localStorage.getItem('age'))
+description.value = JSON.parse(localStorage.getItem('description'))
+
+nameof.addEventListener('input',(e)=>{
+    e.preventDefault()
+    localStorage.setItem('name',JSON.stringify(nameof.value))
+})
+
+age.addEventListener('input',(e)=>{
+    e.preventDefault()
+    localStorage.setItem('age',JSON.stringify(age.value))
+})
+ 
+description.addEventListener('input',(e)=>{
+    e.preventDefault()
+    localStorage.setItem('description',JSON.stringify(description.value))
+})
+
+const gender = document.querySelector('input[name="gender"]')
+gender.value = localStorage.getItem('gender')
+gender.addEventListener('click',(e)=>{
+    e.preventDefault()
+    if(gender.checked){
+        localStorage.setItem('gender',JSON.stringify(gender.value))
+    }
+})
+
+
+
