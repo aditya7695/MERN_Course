@@ -6,7 +6,6 @@ addStudent.addEventListener('click',(e)=>{
  e.preventDefault()
  const name = document.getElementById('name')
 const age = document.getElementById('age')
-
 const checkbox = document.querySelectorAll('.skill')
 const select = document.querySelector('#course')
 const studentObj = {};
