@@ -29,7 +29,7 @@ async function testing(){
             console.log(data);
         })
     }catch(err){
-
+        console.log(err);
     }
 }
 testing();
