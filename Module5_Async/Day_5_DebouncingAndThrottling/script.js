@@ -50,6 +50,17 @@
 // })
 
  
+
+
+const debounce = (fn,delay) =>{
+    let timerId ; 
+    return function(...args){
+        clearTimeout(timerId);
+        timerId = setTimeout(()=>{
+            fn(...args)
+        },delay)
+    }
+}
 async function fetchData(value){
     const res = await fetch(`https://jsonplaceholder.typicode.com/users?name_like=${value}`);
     const data = await res.json();
@@ -58,8 +69,9 @@ async function fetchData(value){
     })
    
 }
-const input = document.getElementById('searchInput')
-input.addEventListener('input',(e)=>{
-    fetchData(e.target.value);
-})
+const searchWithDebounce = debounce(fetchData,1000);
 
+const input = document.getElementById('searchInput');
+input.addEventListener('input',(e)=>{
+    searchWithDebounce(e.target.value)
+})
