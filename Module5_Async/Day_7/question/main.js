@@ -15,7 +15,6 @@ submit.addEventListener('click',(e)=>{
 user.push(Obj);
 list.innerHTML=""
 user.map((item)=>{
-    
     let li = document.createElement('li');
     li.innerHTML = item.name;
     list.appendChild(li);
