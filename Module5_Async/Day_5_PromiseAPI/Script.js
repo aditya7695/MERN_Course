@@ -1,21 +1,17 @@
-// async function testing(){
-//     try{
-//         let res = await Promise.all([
-//             fetch("https://api.github.com/users/iliakan"),
-//             fetch("https://api.github.com/users/remy"),
-//             fetch("https://api.github.com/users/jeresig")
-//         ])
-//         // res.map(async(item)=>{
-//         //     let data = await item.json();
-//         //     console.log(data);
-//         // })
-//         const dataArray = await Promise.all(res.map(item =>item.json()));
-//         console.log(dataArray.map(item => item));
-//     }catch(err){
-//         console.log(err);
-//     }
-// }
-// testing();
+async function testing(){
+    try{
+        let res = await Promise.all([
+            fetch("https://api.github.com/users/iliakan"),
+            fetch("https://api.github.com/users/remy"),
+            fetch("https://api.github.com/users/jeresig")
+        ])
+        const dataArray = await Promise.all(res.map(item =>item.json()));
+        console.log(dataArray.map(item => item));
+    }catch(err){
+        console.log(err);
+    }
+}
+testing();
 
 // Promise.allSettled([
 //     new Promise((res,rej)=>{

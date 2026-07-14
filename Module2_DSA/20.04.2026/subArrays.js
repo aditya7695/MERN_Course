@@ -1,35 +1,34 @@
 
 
-/* let arr = [1,2,3,4,5]
-for (let i=0 ; i<arr.length ; i++){
-    let sub = [];
-    for(let j=i ; j < arr.length ; j++){
-        sub.push(arr[j]);
-        console.log(sub);
-        
-    }
-} */
+// let arr = [1,2,3,4,5]
+// for (let i=0 ; i<arr.length ; i++){
+//     let sub = [];
+//     for(let j=i ; j < arr.length ; j++){
+//         sub.push(arr[j]);
+//         console.log(sub);   
+//     }
+// }
 
 
-    /* let arr = [1,2,3,4,5]
-for (let i=0 ; i<arr.length ; i++){
-    for(let j=i ; j < arr.length ; j++){
-        console.log(arr.slice(i,j+1));
-    }
-} */
-/* 
-function hasSubArraySum(arr,target){
-    for(let i=0 ; i<arr.length ; i++){
-        let sum=0;
-        for(let j=i ; j<arr.length ; j++){
-            sum += arr[j];
-            if(sum == target){
-                return true;
-            }
-        }
-    } 
-    return false;
-}console.log(hasSubArraySum([1,2,3,4,5],155));  */
+//     let arr = [1,2,3,4,5]
+// for (let i=0 ; i<arr.length ; i++){
+//     for(let j=i ; j < arr.length ; j++){
+//         console.log(arr.slice(i,j+1));
+//     }
+// }
+
+// function hasSubArraySum(arr,target){
+//     for(let i=0 ; i<arr.length ; i++){
+//         let sum=0;
+//         for(let j=i ; j<arr.length ; j++){
+//             sum += arr[j];
+//             if(sum == target){
+//                 return true;
+//             }
+//         }
+//     } 
+//     return false;
+// }console.log(hasSubArraySum([1,2,3,4,5],15)); 
 
 
 // kadence algo used for calculate the maximum sum of substring
@@ -107,27 +106,27 @@ console.log(twoSum([0,-3,-1,2,1],2)); */
 
 // Sliding window
 
-function maxSumSlidingWindow(arr,k){
-    const n=arr.length;
-    if(n<k){
-        return "Invalid K"
-    }
-    let windowSum = 0;
-    //step 1 calculate the sum of 1st subarray
-    for (let i=0 ; i<k ; i++){
-        windowSum += arr[i];
-    }
-    let maxSum=windowSum;
-    // Sliding logic
-    //Slide the window from start to end of the array
-    // if the previous element arr[i-k] is removed from the window sum and the next element arr[i] is added
-    for(let i=k ; i<n ; i++){
-        windowSum += arr[i]-arr[i-k];
-        maxSum = Math.max(maxSum,windowSum)
-    }
-    return maxSum;
-}
-console.log(maxSumSlidingWindow([5,2,-1,0,3],3));
+// function maxSumSlidingWindow(arr,k){
+//     const n=arr.length;
+//     if(n<k){
+//         return "Invalid K"
+//     }
+//     let windowSum = 0;
+//     //step 1 calculate the sum of 1st subarray
+//     for (let i=0 ; i<k ; i++){
+//         windowSum += arr[i];
+//     }
+//     let maxSum=windowSum;
+//     // Sliding logic
+//     //Slide the window from start to end of the array
+//     // if the previous element arr[i-k] is removed from the window sum and the next element arr[i] is added
+//     for(let i=k ; i<n ; i++){
+//         windowSum += arr[i]-arr[i-k];
+//         maxSum = Math.max(maxSum,windowSum)
+//     }
+//     return maxSum;
+// }
+// console.log(maxSumSlidingWindow([5,2,-1,0,3],3));
 
 
 
