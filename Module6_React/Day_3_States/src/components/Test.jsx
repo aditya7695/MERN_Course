@@ -1,9 +1,9 @@
 
 const Test = () => {
 
-    const handleClick = (name) => {
-        alert(`hello : ${name}`)
-    }
+    // const handleClick = (name) => {
+    //     alert(`hello : ${name}`)
+    // }
   return (
     <div>
         {/* <button onClick={()=>handleClick("Aditya")}>Like</button> */}

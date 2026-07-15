@@ -7,5 +7,4 @@ const Button = ({text,clickEvent}) => {
     </div>
   )
 }
-
 export default Button
