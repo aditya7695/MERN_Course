@@ -1,9 +1,13 @@
-/* const showBtn = document.querySelector('#showBtn')
+const showBtn = document.querySelector('#showBtn')
 const modal = document.querySelector('#modal')
+const closeButton = document.querySelector('#close')
 
 showBtn.addEventListener('click',()=>{
     modal.classList.toggle('d-none')
-}) */
+})
+closeButton.addEventListener('click',()=>{
+    modal.classList.toggle('d-none')
+})
 
 
 
