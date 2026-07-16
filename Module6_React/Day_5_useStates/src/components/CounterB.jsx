@@ -75,3 +75,12 @@ const handleClick = () =>{
 }
 export default CounterB
 
+/* 
+in the above code we can see thst even tho the stats is updated 5 times but component only rerenders only one time
+This is known as Batching , in Batching react 
+->
+1. waits until your eveent handkeres finishes =
+2. gathers all your state updates
+3. applies them in one render
+*/
+
