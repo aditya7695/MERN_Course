@@ -1,17 +1,17 @@
-async function testing(){
-    try{
-        let res = await Promise.all([
-            fetch("https://api.github.com/users/iliakan"),
-            fetch("https://api.github.com/users/remy"),
-            fetch("https://api.github.com/users/jeresig")
-        ])
-        const dataArray = await Promise.all(res.map(item =>item.json()));
-        console.log(dataArray.map(item => item));
-    }catch(err){
-        console.log(err);
-    }
-}
-testing();
+// async function testing(){
+//     try{
+//         let res = await Promise.all([
+//             fetch("https://api.github.com/users/iliakan"),
+//             fetch("https://api.github.com/uses/remy"),
+//             fetch("https://api.github.com/users/jeresig")
+//         ])
+//         const dataArray = await Promise.all(res.map(item =>item.json()));
+//         console.log(dataArray.map(item => item));
+//     }catch(err){
+//         console.log(err);
+//     }
+// }
+// testing();
 
 // Promise.allSettled([
 //     new Promise((res,rej)=>{
@@ -86,20 +86,20 @@ testing();
 // Promise.any give me the result of 1st promise 
 // that resolves or fullfills
 
-async function testing(){
-    try{
-        let res = await Promise.any([
-            fetch("https://jsonplaceholder.typicode.com/posts"),
-            fetch("https://jsonplaceholder.typicode.com/comments"),
-            fetch("https://jsonplaceholder.typicode.com/users")
-        ])
-        const data = await res.json();
-        console.log(data);
-    }catch(err){
-        console.log(err);
-    }
-}
-testing();
+// async function testing(){
+//     try{
+//         let res = await Promise.any([
+//             fetch("https://jsonplaceholder.typicode.com/posts"),
+//             fetch("https://jsonplaceholder.typicode.com/comments"),
+//             fetch("https://jsonplaceholder.typicode.com/users")
+//         ])
+//         const data = await res.json();
+//         console.log(data);
+//     }catch(err){
+//         console.log(err);
+//     }
+// }
+// testing();
 
 
 

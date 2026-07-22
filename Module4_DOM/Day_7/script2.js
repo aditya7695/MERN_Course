@@ -1,5 +1,5 @@
-// // this it refers to the object or the 
-// // context where thw current code is executing
+// this it refers to the object or the 
+// context where thw current code is executing
 // let obj = {
 //     name:"Aditya",
 //     a:10,
@@ -30,8 +30,6 @@
 
 // obj.obj1.func()
 
-
-
 // function func(){
 //     console.log(this.name);
 // }
@@ -56,30 +54,30 @@
 // explicitely set the execution context ie. sets the "this" inside function
 // in simple words -> they allow us to borrow the this of an object to be used inside a function
 
-// const person1 = {
-//     name : "Aditya",
-//     age : 22
-// }
-// const person2 = {
-//     name : "Ashish",
-//     age : 23
-// }
+const person1 = {
+    name : "Aditya",
+    age : 22
+}
+const person2 = {
+    name : "Ashish",
+    age : 23
+}
 
-// function intro(city,country){
-//     return `${this.name} is ${this.age} years old from ${city} , ${country}`
-// }
+function intro(city,country){
+    return `${this.name} is ${this.age} years old from ${city} , ${country}`
+}
 
-// // Call();
-// // console.log(intro.call(person1 , "Pune" , "India"));
+// Call();
+console.log(intro.call(person1 , "Pune" , "India"));
 
-// // Apply();
+// Apply();
 
-// // console.log(intro.apply(person2 , ["Mumbai","India"]));
+console.log(intro.apply(person2 , ["Mumbai","India"]));
 
-// // Bind();
+// Bind();
 
-// const introPerson1 = intro.bind(person1);
-// console.log(introPerson1("Delhi","India"));
+const introPerson1 = intro.bind(person1);
+console.log(introPerson1("Delhi","India"));
 
 
 // const counter = {

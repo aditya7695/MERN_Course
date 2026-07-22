@@ -12,28 +12,27 @@ closeButton.addEventListener('click',()=>{
 
 
 // Fetching details from my RAdio button
-// const submit = document.querySelector('#submit');
+const submit = document.querySelector('#submit');
 
-/* submit.addEventListener('click',()=>{
-const selectedRadioBtn = document.querySelector('input[name="gender"]:checked')
-console.log(selectedRadioBtn.value);
+// submit.addEventListener('click',(e)=>{
+//     e.preventDefault()
+// const selectedRadioBtn = document.querySelector('input[name="gender"]:checked')
+// console.log(selectedRadioBtn.value);
 
-}) */
+// })
 
 
-/* submit.addEventListener('click',()=>{
-   
+submit.addEventListener('click',(e)=>{
+   e.preventDefault()
     let checkedElement = [];
-    const checkedBtns = document.querySelectorAll('input[name="hobby"]')
+    const checkedBtns = document.querySelectorAll('input[name="hobby"]:checked')
     
     checkedBtns.forEach(items =>{
-        if(items.checked){
             checkedElement.push(items.value)
-        }
     })
     console.log(checkedElement);
 })
- */
+
 
 
 // submit.addEventListener('click',(e)=>{
@@ -66,11 +65,11 @@ console.log(selectedRadioBtn.value);
         
         
         
-        const input = document.querySelector('#input')
-        let h3 = document.querySelector('h3')
+        // const input = document.querySelector('#input')
+        // let h3 = document.querySelector('h3')
 
-        input.addEventListener('input' , (e)=>{
-            console.log(e.target.value);
-            h3.textContent = e.target.value
-        })
+        // input.addEventListener('input' , (e)=>{
+        //     console.log(e.target.value);
+        //     h3.textContent = e.target.value
+        // })
 

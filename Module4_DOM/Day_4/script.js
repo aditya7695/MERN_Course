@@ -55,10 +55,10 @@ function func(){
     console.log("Hello");
 } */
 
-/* let form = document.querySelector('form')
+let form = document.querySelector('form')
 let div = document.querySelector('div')
 let p = document.querySelector('p')
- */
+
 /* form.addEventListener('click', () => alert("Form is clicked"));
 div.addEventListener('click',()=>alert("Div is Clicked"))
 p.addEventListener('click',()=>alert("P is Clicked")) */
@@ -75,34 +75,36 @@ form.addEventListener('click', () => alert("Form is clicked"));
 div.addEventListener('click',()=>alert("Div is Clicked"))
 p.addEventListener('click',()=>alert("P is Clicked"))
 }
+eventBubbling() */
 
-function eventCapturing(){
+/* function eventCapturing(){
 form.addEventListener('click', () => alert("Form is clicked"),true);
 div.addEventListener('click',()=>alert("Div is Clicked"),true)
 p.addEventListener('click',(e)=>{
     e.stopPropagation();
     alert("P is Clicked")});
 }
-eventCapturing();
- */
+eventCapturing(); */
 
 
-/* let button = document.querySelector('#add');
+
+// let button = document.querySelector('#add');
 let ul = document.querySelector('#todo-list');
-button.addEventListener('click',addNew)
-let count = 1 ;
-function addNew(){
-    let li = document.createElement('li')
-    li.textContent = `New element ${count++}`
-    ul.append(li)
-}
+// button.addEventListener('click',addNew)
+// let count = 1 ;
+// function addNew(){
+//     let li = document.createElement('li')
+//     li.textContent = `New element ${count++}`
+//     ul.append(li)
+// }
 
-ul.addEventListener('click', (e)=>{
+ul.addEventListener('click',(e)=>{
+    // console.log(e)
     if(e.target.tagName == "LI"){
         e.target.classList.toggle('done')
     }
 })
- */
+
 // Event Dlegation - when we attach a single eventlistner
 
 
@@ -125,7 +127,7 @@ box.addEventListener('mouseout',()=>{
 }) */
 
 
-let btn = document.querySelector('#theme-toogle')
+/* let btn = document.querySelector('#theme-toogle')
 let body = document.querySelector('body')
 btn.addEventListener('click',()=>{
  body.classList.toggle('dark-theme')
@@ -135,4 +137,4 @@ btn.addEventListener('click',()=>{
  else if(btn.textContent == "Light"){
     btn.textContent = "Dark"
  }
-})
+}) */

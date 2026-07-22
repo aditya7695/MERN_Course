@@ -1,7 +1,4 @@
 // //  Local storage
-
-
-
 // // LocalStorage --> its a browser storage given to a website that allows 
 // // persistant key value pairs with no expiration time
 // // the data survives when the broser restarts and it is accessible accross all 

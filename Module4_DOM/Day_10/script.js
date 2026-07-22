@@ -1,4 +1,4 @@
-// Encapsulation is hiding internal implementation details and  exposing only necessary interface .
+// Abstraction is hiding internal implementation details and  exposing only necessary interface .
 // private feilds and public feilds
 
 // class DataComparison{
