@@ -13,7 +13,7 @@ const Theme = () => {
     },[theme])
   return (
     <div>
-        <h1>Theme : {theme}</h1> 
+      <h1>Theme : {theme}</h1> 
       <button onClick={()=> setTheme(prev => prev== 'light' ? 'dark' : 'light')}>Toggle Theme</button>
     </div>
   )
