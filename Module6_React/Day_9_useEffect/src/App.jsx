@@ -7,8 +7,8 @@ import Theme from "./components/Theme"
 const App = () => {
   return (
     <div>
-      {/* <Theme/> */}
-      {/* <FetchData/> */}
+      <Theme/>
+      <FetchData/>
       <FetchingProducts/>
     </div>
   )
