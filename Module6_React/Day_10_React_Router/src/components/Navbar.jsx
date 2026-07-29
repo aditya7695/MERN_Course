@@ -1,4 +1,4 @@
-import { Link } from "react-router"
+import {  NavLink } from "react-router"
 
 
 
@@ -14,9 +14,9 @@ const Navbar = () => {
         alignItems : "center"
       }}>
 
-        <Link to="/">Home</Link>
-        <Link to="/about" target="_blank"> About</Link>
-        <Link to="/contact">Contact</Link>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/about" target="_blank"> About</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
 
         </nav>
     </div>
