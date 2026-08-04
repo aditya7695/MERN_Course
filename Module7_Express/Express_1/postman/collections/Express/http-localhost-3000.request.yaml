@@ -1,0 +1,14 @@
+$kind: http-request
+name: http://localhost:3000
+description: ""
+url: http://localhost:3000/movies
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "title" : "Dhoom",
+        "genere" : "Action",
+        "watched" : "true"
+    }
+order: 1785736217933
