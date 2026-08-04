@@ -103,7 +103,7 @@ console.log(insertionSort(arr));
 
 // Merge Sort
 
-/* function mergeSort(arr){
+function mergeSort(arr){
 
     if (arr.length < 2){
         return arr
@@ -139,7 +139,7 @@ function merge(leftArr,rightArr){
 let arr = [8,-2,-6,4,20];
 console.log(mergeSort(arr));
 
-  */
+ 
 
 /* let str="acciojob";
 function reverseStr(str){
