@@ -1,0 +1,6 @@
+$kind: http-request
+name: http://localhost:3000/todo/103
+description: ""
+url: http://localhost:3000/todo/103
+method: DELETE
+order: 4503586712374588

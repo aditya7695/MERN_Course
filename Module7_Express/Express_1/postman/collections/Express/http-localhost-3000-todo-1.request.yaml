@@ -1,0 +1,13 @@
+$kind: http-request
+name: http://localhost:3000/todo
+description: ""
+url: http://localhost:3000/todo
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "task" : "todo5",
+        "completed" : false
+    }
+order: 4503566606317801

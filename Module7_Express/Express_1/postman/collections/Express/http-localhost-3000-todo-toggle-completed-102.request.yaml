@@ -1,0 +1,9 @@
+$kind: http-request
+name: http://localhost:3000/todo/toggle-completed/102
+description: ""
+url: http://localhost:3000/todo/toggle-completed/102
+method: PATCH
+body:
+  type: json
+  content: ""
+order: 4503571473843926

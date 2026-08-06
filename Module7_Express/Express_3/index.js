@@ -200,13 +200,13 @@ app.put("/todo/:id",(req,res)=>{
 
   const searchTodo = todos.find(item => item.id == id)
 
-  searchTodo.task = task;
-
-  searchTodo.completed = completed;
+  const updateTodo = {
+    id : Number(id) ,task , completed
+  }
 
   const index = todos.findIndex(t => t.id == id)
 
-  todos[index] = searchTodo;
+  todos[index] = updateTodo;
 
   res.json(todos)
   
