@@ -1,0 +1,15 @@
+$kind: http-request
+name: http://localhost:3000/movies/2
+description: ""
+url: http://localhost:3000/movies/2
+method: DELETE
+body:
+  type: json
+  content: |-
+    {
+        "title":"Krishh",
+        "genere":"comedy",
+        "watched":"false"
+        
+    }
+order: 3977098873286296

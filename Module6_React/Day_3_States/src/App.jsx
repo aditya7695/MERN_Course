@@ -1,8 +1,10 @@
 import About from "./components/About"
 import Cart from "./components/Cart"
+import Child from "./components/Child"
 import Contact from "./components/Contact"
 import States from "./components/States"
 import Test from "./components/Test"
+
 
 const App = () => {
   return (
@@ -12,6 +14,7 @@ const App = () => {
       <About/> 
       <Cart/>    
       <States/>
+      <Child/>
     </div>
   )
 }
