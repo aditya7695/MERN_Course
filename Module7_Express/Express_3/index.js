@@ -203,12 +203,11 @@ app.put("/todo/:id",(req,res)=>{
   const updateTodo = {
     id : Number(id) ,task , completed
   }
-
   const index = todos.findIndex(t => t.id == id)
 
   todos[index] = updateTodo;
 
-  res.json(todos)
+  res.json({message : "all todos updates", todos})
   
 })
 
