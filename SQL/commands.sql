@@ -1,12 +1,13 @@
 -- Query to craete the table 
 
-create table users(
-    id serial,
-    name varchar(50),
-    email varchar(100),
-    role varchar(25) default 'user',
-    created_at timestamp default now()
-)
+-- create table users(
+--     id serial,
+--     name varchar(50),
+--     email varchar(100),
+--     role varchar(25) default 'user',
+--     created_at timestamp default now()
+-- )
+
 -- Insert values into table
 -- insert into users (name , email) values ('gaurav' , 'gaurav@gmail.com');
 
