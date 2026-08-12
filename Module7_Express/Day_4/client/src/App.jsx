@@ -8,7 +8,7 @@ const App = () => {
   useEffect(()=>{
     async function fetctData(){
       const res = await axios.get("http://localhost:3000/todo")
-      console.log(res.data.data)
+      // console.log(res.data.data)
       setTodos(res.data.data)
     }
     fetctData()
