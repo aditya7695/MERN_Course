@@ -15,6 +15,12 @@ db.orders.insertMany([
       _id: 3
     }
 ]);
+db.orders.insert({
+  _id : 4,
+  item : "kaju",
+  price : 22,
+  quantity : 5
+})
 
 db.inventory.insertMany([
 {
