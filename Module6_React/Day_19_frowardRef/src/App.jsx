@@ -1,20 +1,24 @@
 import { useRef } from "react"
+import Child from "./Child";
 
 
 const App = () => {
 
-  const h1Ref = useRef(null);
-  const inputRef = useRef(null);
+  const iRef = useRef(null);
 
   return (
     <div>
-      <h1 ref={h1Ref}>Hello this is h1</h1>
-      <button onClick={()=>{
-        h1Ref.current.style.color = 'red';
-        inputRef.current.focus();
-        h1Ref.current.textContent = 'Button is Clicked'
-      }}>Click</button>
-      <input ref={inputRef} type="text" />
+      <h1>Title</h1>
+
+      <Child 
+      ref={iRef}
+      name={"Aditya"}/>
+
+      <button
+      onClick={()=>{
+        iRef.current.focus();
+        iRef.current.value = "Aditya Ubale"
+      }} >Click</button>
     </div>
   )
 }
