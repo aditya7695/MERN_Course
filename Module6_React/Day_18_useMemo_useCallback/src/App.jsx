@@ -1,122 +1,334 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+// import { useEffect, useState } from "react"
+
+// const App = () => {
+//   const [highestMark , setHighestMark] = useState({});
+//   const [input , setInput] = useState("");
+//   const [searchedStudent , setSearchedStudent ] = useState([])
+//   // const [marks , setMarks] = useState(null);
+//  const studentList = [
+//     { id: 1, name: "Rajat", marks: 92 },
+//     { id: 2, name: "Aman", marks: 78 },
+//     { id: 3, name: "Priya", marks: 95 },
+//     { id: 4, name: "Neha", marks: 88 },
+//     { id: 5, name: "Rahul", marks: 81 },
+//     { id: 6, name: "Ankit", marks: 97 },
+//     { id: 7, name: "Aarav", marks: 85 },
+//     { id: 8, name: "Vivaan", marks: 91 },
+//     { id: 9, name: "Aditya", marks: 76 },
+//     { id: 10, name: "Arjun", marks: 89 },
+//     { id: 11, name: "Rohan", marks: 82 },
+//     { id: 12, name: "Karan", marks: 94 },
+//     { id: 13, name: "Vikram", marks: 73 },
+//     { id: 14, name: "Sahil", marks: 87 },
+//     { id: 15, name: "Varun", marks: 79 },
+//     { id: 16, name: "Nikhil", marks: 92 },
+//     { id: 17, name: "Yash", marks: 84 },
+//     { id: 18, name: "Mohit", marks: 71 },
+//     { id: 19, name: "Akash", marks: 90 },
+//     { id: 20, name: "Dev", marks: 86 },
+//     { id: 21, name: "Ishaan", marks: 93 },
+//     { id: 22, name: "Kabir", marks: 88 },
+//     { id: 23, name: "Manav", marks: 77 },
+//     { id: 24, name: "Harsh", marks: 81 },
+//     { id: 25, name: "Ayush", marks: 96 },
+//     { id: 26, name: "Dhruv", marks: 83 },
+//     { id: 27, name: "Varad", marks: 75 },
+//     { id: 28, name: "Shubham", marks: 89 },
+//     { id: 29, name: "Tushar", marks: 80 },
+//     { id: 30, name: "Abhishek", marks: 91 },
+//     { id: 31, name: "Ritesh", marks: 74 },
+//     { id: 32, name: "Deepak", marks: 85 },
+//     { id: 33, name: "Saurabh", marks: 92 },
+//     { id: 34, name: "Vivek", marks: 78 },
+//     { id: 35, name: "Piyush", marks: 87 },
+//     { id: 36, name: "Raj", marks: 95 },
+//     { id: 37, name: "Rishi", marks: 82 },
+//     { id: 38, name: "Naveen", marks: 76 },
+//     { id: 39, name: "Tarun", marks: 90 },
+//     { id: 40, name: "Anuj", marks: 84 },
+//     { id: 41, name: "Aditi", marks: 93 },
+//     { id: 42, name: "Sneha", marks: 89 },
+//     { id: 43, name: "Kavya", marks: 96 },
+//     { id: 44, name: "Simran", marks: 81 },
+//     { id: 45, name: "Ananya", marks: 94 },
+//     { id: 46, name: "Shreya", marks: 86 },
+//     { id: 47, name: "Riya", marks: 79 },
+//     { id: 48, name: "Pooja", marks: 88 },
+//     { id: 49, name: "Nisha", marks: 83 },
+//     { id: 50, name: "Meera", marks: 91 },
+//     { id: 51, name: "Isha", marks: 77 },
+//     { id: 52, name: "Diya", marks: 95 },
+//     { id: 53, name: "Kriti", marks: 85 },
+//     { id: 54, name: "Muskan", marks: 80 },
+//     { id: 55, name: "Tanvi", marks: 92 },
+//     { id: 56, name: "Sakshi", marks: 87 },
+//     { id: 57, name: "Radhika", marks: 90 },
+//     { id: 58, name: "Komal", marks: 74 },
+//     { id: 59, name: "Preeti", marks: 89 },
+//     { id: 60, name: "Nandini", marks: 93 },
+//     { id: 61, name: "Mansi", marks: 82 },
+//     { id: 62, name: "Pallavi", marks: 76 },
+//     { id: 63, name: "Swati", marks: 88 },
+//     { id: 64, name: "Shivani", marks: 94 },
+//     { id: 65, name: "Payal", marks: 81 },
+//     { id: 66, name: "Rupali", marks: 86 },
+//     { id: 67, name: "Sonali", marks: 79 },
+//     { id: 68, name: "Anjali", marks: 91 },
+//     { id: 69, name: "Nikita", marks: 84 },
+//     { id: 70, name: "Bhavna", marks: 90 },
+//     { id: 71, name: "Sanya", marks: 95 },
+//     { id: 72, name: "Pallak", marks: 83 },
+//     { id: 73, name: "Khushi", marks: 87 },
+//     { id: 74, name: "Jhanvi", marks: 92 },
+//     { id: 75, name: "Ayesha", marks: 80 },
+//     { id: 76, name: "Fatima", marks: 89 },
+//     { id: 77, name: "Zoya", marks: 96 },
+//     { id: 78, name: "Alisha", marks: 85 },
+//     { id: 79, name: "Mahi", marks: 78 },
+//     { id: 80, name: "Navya", marks: 93 },
+//     { id: 81, name: "Myra", marks: 88 },
+//     { id: 82, name: "Sara", marks: 82 },
+//     { id: 83, name: "Aarohi", marks: 94 },
+//     { id: 84, name: "Ira", marks: 86 },
+//     { id: 85, name: "Kiara", marks: 90 },
+//     { id: 86, name: "Avni", marks: 81 },
+//     { id: 87, name: "Anvi", marks: 95 },
+//     { id: 88, name: "Shanaya", marks: 84 },
+//     { id: 89, name: "Roshni", marks: 79 },
+//     { id: 90, name: "Pallavi", marks: 87 },
+//     { id: 91, name: "Shruti", marks: 91 },
+//     { id: 92, name: "Swara", marks: 83 },
+//     { id: 93, name: "Tara", marks: 89 },
+//     { id: 94, name: "Vanya", marks: 76 },
+//     { id: 95, name: "Ishita", marks: 92 },
+//     { id: 96, name: "Aaradhya", marks: 97 },
+//     { id: 97, name: "Prisha", marks: 88 },
+//     { id: 98, name: "Pari", marks: 85 },
+//     { id: 99, name: "Ritika", marks: 80 },
+//     { id: 100, name: "Kashish", marks: 93 },
+//     { id: 101, name: "Siddharth", marks: 86 },
+//     { id: 102, name: "Abhinav", marks: 91 },
+//     { id: 103, name: "Arnav", marks: 84 },
+//     { id: 104, name: "Reyansh", marks: 96 },
+//     { id: 105, name: "Atharv", marks: 82 },
+//     { id: 106, name: "Vihaan", marks: 89 },
+//     { id: 107, name: "Shaurya", marks: 94 },
+//     { id: 108, name: "Ayaan", marks: 87 },
+//     { id: 109, name: "Krish", marks: 90 },
+//     { id: 110, name: "Rudra", marks: 78 },
+//     { id: 111, name: "Om", marks: 83 },
+//     { id: 112, name: "Aryan", marks: 92 },
+//     { id: 113, name: "Veer", marks: 85 },
+//     { id: 114, name: "Laksh", marks: 88 },
+//     { id: 115, name: "Devansh", marks: 95 },
+//     { id: 116, name: "Parth", marks: 81 },
+//     { id: 117, name: "Raghav", marks: 90 },
+//     { id: 118, name: "Samarth", marks: 86 },
+//     { id: 119, name: "Darsh", marks: 79 },
+//     { id: 120, name: "Kiaan", marks: 93 },
+//     { id: 121, name: "Adit", marks: 87 },
+//     { id: 122, name: "Abeer", marks: 91 },
+//     { id: 123, name: "Ronav", marks: 84 },
+//     { id: 124, name: "Kunal", marks: 77 },
+//     { id: 125, name: "Sameer", marks: 89 },
+//     { id: 126, name: "Rajiv", marks: 82 },
+//     { id: 127, name: "Samar", marks: 94 },
+//     { id: 128, name: "Varun", marks: 80 },
+//     { id: 129, name: "Rohit", marks: 92 },
+//     { id: 130, name: "Manish", marks: 85 },
+//     { id: 131, name: "Ashish", marks: 88 },
+//     { id: 132, name: "Sachin", marks: 95 },
+//     { id: 133, name: "Vishal", marks: 81 },
+//     { id: 134, name: "Gaurav", marks: 90 },
+//     { id: 135, name: "Himanshu", marks: 86 },
+//     { id: 136, name: "Lokesh", marks: 78 },
+//     { id: 137, name: "Pankaj", marks: 83 },
+//     { id: 138, name: "Ravi", marks: 91 },
+//     { id: 139, name: "Amit", marks: 87 },
+//     { id: 140, name: "Sumit", marks: 89 },
+//     { id: 141, name: "Suresh", marks: 76 },
+//     { id: 142, name: "Mahesh", marks: 84 },
+//     { id: 143, name: "Ramesh", marks: 80 },
+//     { id: 144, name: "Dinesh", marks: 93 },
+//     { id: 145, name: "Rajesh", marks: 88 },
+//     { id: 146, name: "Naresh", marks: 82 },
+//     { id: 147, name: "Mukesh", marks: 90 },
+//     { id: 148, name: "Yogesh", marks: 85 },
+//     { id: 149, name: "Ganesh", marks: 94 },
+//     { id: 150, name: "Harish", marks: 79 },
+//     { id: 151, name: "Pranav", marks: 92 },
+//     { id: 152, name: "Pratham", marks: 86 },
+//     { id: 153, name: "Ansh", marks: 95 },
+//     { id: 154, name: "Anshul", marks: 81 },
+//     { id: 155, name: "Devraj", marks: 89 },
+//     { id: 156, name: "Tejas", marks: 87 },
+//     { id: 157, name: "Rohin", marks: 83 },
+//     { id: 158, name: "Kartik", marks: 91 },
+//     { id: 159, name: "Nakul", marks: 78 },
+//     { id: 160, name: "Akhil", marks: 84 },
+//     { id: 161, name: "Aman", marks: 90 },
+//     { id: 162, name: "Akshay", marks: 93 },
+//     { id: 163, name: "Chetan", marks: 85 },
+//     { id: 164, name: "Chirag", marks: 88 },
+//     { id: 165, name: "Dheeraj", marks: 80 },
+//     { id: 166, name: "Eshan", marks: 96 },
+//     { id: 167, name: "Farhan", marks: 82 },
+//     { id: 168, name: "Faizan", marks: 89 },
+//     { id: 169, name: "Imran", marks: 76 },
+//     { id: 170, name: "Jatin", marks: 91 },
+//     { id: 171, name: "Keshav", marks: 87 },
+//     { id: 172, name: "Madhav", marks: 94 },
+//     { id: 173, name: "Naman", marks: 83 },
+//     { id: 174, name: "Nitin", marks: 90 },
+//     { id: 175, name: "Pradeep", marks: 79 },
+//     { id: 176, name: "Rajat", marks: 86 },
+//     { id: 177, name: "Rakesh", marks: 92 },
+//     { id: 178, name: "Ranjit", marks: 81 },
+//     { id: 179, name: "Sandeep", marks: 88 },
+//     { id: 180, name: "Sanjay", marks: 84 },
+//     { id: 181, name: "Shashank", marks: 95 },
+//     { id: 182, name: "Suraj", marks: 77 },
+//     { id: 183, name: "Ujjwal", marks: 89 },
+//     { id: 184, name: "Vikas", marks: 93 },
+//     { id: 185, name: "Vinay", marks: 85 },
+//     { id: 186, name: "Wasim", marks: 80 },
+//     { id: 187, name: "Zaid", marks: 91 },
+//     { id: 188, name: "Aarav", marks: 87 },
+//     { id: 189, name: "Bhavesh", marks: 82 },
+//     { id: 190, name: "Darshan", marks: 90 },
+//     { id: 191, name: "Girish", marks: 78 },
+//     { id: 192, name: "Jai", marks: 94 },
+//     { id: 193, name: "Kushal", marks: 86 },
+//     { id: 194, name: "Mihir", marks: 89 },
+//     { id: 195, name: "Nirav", marks: 83 },
+//     { id: 196, name: "Pritam", marks: 92 },
+//     { id: 197, name: "Rishabh", marks: 88 },
+//     { id: 198, name: "Shaan", marks: 95 },
+//     { id: 199, name: "Tanish", marks: 81 },
+//     { id: 200, name: "Utkarsh", marks: 90 },
+//     { id: 201, name: "Vedant", marks: 84 },
+//     { id: 202, name: "Yuvraj", marks: 93 },
+//     { id: 203, name: "Aakash", marks: 79 },
+//     { id: 204, name: "Bharat", marks: 87 },
+//     { id: 205, name: "Hemant", marks: 82 },
+//     { id: 206, name: "Rituraj", marks: 91 }
+// ];
+
+//  const dsc =  studentList.sort((a,b)=> {
+//     return b.marks - a.marks
+//   })
+//  useEffect(()=> {
+// const setHigh = ()=>{
+//   setHighestMark(dsc[0])
+// }
+// setHigh()
+//  },[])
+
+
+// const handleSearch = () => {
+//   setSearchedStudent(studentList.filter((student) => student.name.toLowerCase().includes(input.toLowerCase())))
+// } 
+
+//   return (
+//     <div>
+//       <h1>Result</h1>
+//       <h3>{highestMark.name} is the heighest scorer with {highestMark.marks}</h3>
+//       <input type="text" placeholder="Enter name" value={input} onChange={(e)=> setInput(e.target.value)}/>
+//       <button onClick={handleSearch}>Find</button>
+//       <ul>
+//         {searchedStudent.map((student)=> <li key={student.id}>{student.name} have {student.marks}</li>)}
+//       </ul>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { useState , useMemo} from "react";
+import { studentList } from "../public/utilites";
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [searchInput, setSearchInput] = useState("");
+  const [serchResult, setSearchResult] = useState("");
+  const [sortedStudentList , setSortedStudentList] = useState([]);
+
+  function highestScorer(studentList) {
+    let maximumMark = 0;
+    let topStudent = {};
+    for (let student of studentList) {
+      if (student.marks > maximumMark) {
+        maximumMark = student.marks;
+        topStudent = student;
+      }
+    }
+    console.log("calculation executed");
+    return topStudent;
+
+  }
+
+  const handleSort = () => {
+    setSortedStudentList(studentList.sort((a,b) => {
+      return a.marks - b.marks
+    }))
+  }
+
+
+  const topStudent = useMemo(()=> highestScorer(studentList) , [])
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div>
+      <h1>Result</h1>
+      <p> {topStudent.name} is highest scorer with {topStudent.marks} marks</p>
 
-      <div className="ticks"></div>
+      <input
+        type="text"
+        placeholder="Type Name "
+        value={searchInput}
+        onChange={(e) => {
+          setSearchInput(e.target.value);
+          console.log(searchInput);
+        }} />
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      <button onClick={() => {
+        let result = studentList.filter((e) =>
+          e.name === searchInput
+        );
+        if (result.length > 0) {
+          setSearchResult(result[0].marks);
+          console.log(result[0].marks);
+        }
+        else {
+          setSearchResult('Not Found');
+        }
+      }}>
+        Find
+      </button>
+      {
+        serchResult !== "" &&
+        <p>{serchResult}</p>
+      }
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      <button onClick={handleSort}>Sort all students</button>
+      <ul>
+        {sortedStudentList.map(item => <li key={item.id}>Name : {item.name} & Marks : {item.marks}</li>)}
+      </ul>
+
+    </div>
   )
 }
 
-export default App
+
+export default App;
