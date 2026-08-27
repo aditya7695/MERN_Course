@@ -1,4 +1,4 @@
-import { lazy, Suspense, useRef, useState } from "react"
+import { lazy, Suspense, useState } from "react"
 const Child = lazy(()=> {
   
   const result = new Promise(
@@ -13,24 +13,24 @@ const Child = lazy(()=> {
 
 
 const App = () => {
-  const iRef = useRef(null);
-  const hRef = useRef(null);
+  // const iRef = useRef(null);
+  // const hRef = useRef(null);
   const [show , setShow] = useState(false)
 
-  const finalRef = {
-    iRef : iRef,
-    hRef : hRef
-  }
+  // const finalRef = {
+  //   iRef : iRef,
+  //   hRef : hRef
+  // }
   return (
     <div>
-      <h1>Learning Forward ref</h1>
+      <h1>Parent</h1>
       {
         show && 
        (< Suspense fallback = {<p>Loading child component ... </p>} >
 
           <Child 
-      name = {"Aditya"}
-      ref = {finalRef}
+      // name = {"Aditya"}
+      // ref = {finalRef}
       />
        </Suspense>
        )
