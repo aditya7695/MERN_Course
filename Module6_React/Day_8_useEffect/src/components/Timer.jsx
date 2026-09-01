@@ -6,7 +6,7 @@ const Timer = () => {
 
     useEffect (()=>{
 
-       let timerId =  setInterval(() => {
+       let timerId = setInterval(() => {
             setCount(prev => prev + 1)
         }, 1000);
 
