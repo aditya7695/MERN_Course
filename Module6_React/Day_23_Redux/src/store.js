@@ -1,7 +1,10 @@
 import { legacy_createStore as createStore } from 'redux';
 
 const statevariableObj = {
-    items: []
+    items: [],
+    itemsTotal : 0,
+    discount : 10,
+    discountedTotal : 0
 };
 
 const itemReducer = (state = statevariableObj, action) => {
@@ -39,6 +42,24 @@ const itemReducer = (state = statevariableObj, action) => {
                     .filter(item => item.itemQuantity > 0)
             };
         }
+
+        case 'updateDiscount' : {
+            const {newDiscount} = action.payload;
+            return {
+                ...state ,
+                itemsTotal : state.items.reduce((acc,crr)=>{
+                    acc = crr.itemPrice * crr.itemQuantity
+                    return acc
+                },0), 
+                discount : newDiscount,
+            }
+        }
+        case 'totalPrice' : {
+            return {
+                ...state , 
+                discountedTotal : state.itemsTotal * state.discount / 100
+            }
+        }
         default:
             return state;
     }
@@ -47,15 +68,16 @@ const itemReducer = (state = statevariableObj, action) => {
 const store = createStore(itemReducer);
 
 store.subscribe(() => {
-    console.log("Updated State:", store.getState().items);
+    console.log("Updated State:", store.getState());
 });
 
-// Add items
 store.dispatch({ type: 'addItem', payload: { id: 1, name: "Mobiles", quantity: 50, price: 30000 } });
+
 store.dispatch({ type: 'addItem', payload: { id: 2, name: "Laptops", quantity: 20, price: 60000 } });
 
-// Case 1: Partial update (reduces quantity to 20)
 store.dispatch({ type: 'updateQuantity', payload: { id: 1, newQuantity: 20 } });
 
-// Case 2: Deduct full remaining quantity (removes the item completely)
 store.dispatch({ type: 'updateQuantity', payload: { id: 1, quantityToDeduct: 20 } });
+
+store.dispatch({type : 'updateDiscount', payload : {newDiscount : 50}});
+store.dispatch({type : 'totalPrice'});
