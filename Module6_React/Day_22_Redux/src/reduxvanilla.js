@@ -17,13 +17,23 @@ const itemReducer = (state = statevariableObj, action) => {
             });
             return { ...state, items: newItem };
         }
-        case 'removeItem': {
-            const newItems = state.items.map(item => {
-                if(item.id!== action.payload.id){
-                    item.quantity = item.quantity-action.payload.quantity
-                }
-            })
-            return { ...state, items : newItems };
+        case 'updateQuantity': {
+            const newTodo = state.todo.filter(item => item.toDoName !== action.payload.name);
+            return { ...state, todo: newTodo };
+        }
+        case 'toggle': {
+            return {
+                ...state,
+                todo: state.todo.map(item => {
+                    if (item.todoId === action.payload.id) {
+                        return {
+                            ...item,
+                            toggle: !item.toggle
+                        };
+                    }
+                    return item; 
+                })
+            };
         }
         default:
             return state;
@@ -46,8 +56,3 @@ store.subscribe(() => {
 
 
 store.dispatch({type : 'addItem' , payload : {id : 1 , name : "Mobiles" , quantity : 50 , price : 30000}})
-store.dispatch({type : 'addItem' , payload : {id : 2 , name : "Laptop" , quantity : 20 , price : 70000}})
-store.dispatch({type : 'addItem' , payload : {id : 3 , name : "PC" , quantity : 12 , price : 120000}})
-
-store.dispatch({type : 'removeItem', payload : {id : 2 , quantity : 4} } )
-
