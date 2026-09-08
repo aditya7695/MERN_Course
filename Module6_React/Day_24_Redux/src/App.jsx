@@ -1,7 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 
 const App = () => {
-  // Destructure global state directly
   const { items, itemsTotal, discountedTotal, discount } = useSelector((state) => state);
   const dispatch = useDispatch();
 
@@ -9,7 +8,6 @@ const App = () => {
     <div>
       <h1>Shopping Cart</h1>
 
-      {/* Fixed property evaluation syntax error */}
       {items && items.length > 0 ? (
         items.map((item) => (
           <div key={item.itemId} style={{ marginBottom: "1rem" }}>
