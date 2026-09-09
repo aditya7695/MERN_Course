@@ -4,7 +4,7 @@ import { addItem, updateQuantity, updateDiscount, totalPrice } from './reduxStor
 
 function App() {
   const dispatch = useDispatch();
-  const { items, itemsTotal, discount, discountedTotal } = useSelector((state) => state.item);
+  const { items, itemsTotal, discount, discountedTotal } = useSelector((state) => state.cart);
 
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');

@@ -52,7 +52,7 @@ const cartSlice = createSlice ({
     }
 
 })
-export const {addItem} = createSlice.action
+export const addItem = createSlice.action
 
 const store = configureStore ({
     reducer : {
@@ -60,4 +60,4 @@ const store = configureStore ({
     }
 })
 
-export default store
+export default store;

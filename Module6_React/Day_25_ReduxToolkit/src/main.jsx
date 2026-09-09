@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import store from './reduxStore.js/Slices/cartSlice.js'; 
+import store from './reduxStore.js/Slices/newCartSlice.js'; 
 import App from './App';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
