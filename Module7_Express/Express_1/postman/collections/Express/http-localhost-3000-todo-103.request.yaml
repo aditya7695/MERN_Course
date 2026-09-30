@@ -1,13 +1,13 @@
 $kind: http-request
 name: http://localhost:3000/todo/103
 description: ""
-url: http://localhost:3000/todo/103
+url: http://localhost:3000/todo/6a83d64c55182197f4fd5fc3
 method: PUT
 body:
   type: json
   content: |-
     {
-        "task" : "Coding",
-        "completed" : false
+        "task" : "update from postman",
+        "completed" : true
     }
 order: 4503578592815124

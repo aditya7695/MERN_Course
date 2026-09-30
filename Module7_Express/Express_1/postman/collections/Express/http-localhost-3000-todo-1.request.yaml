@@ -1,13 +1,13 @@
 $kind: http-request
 name: http://localhost:3000/todo
 description: ""
-url: http://localhost:3000/todo
+url: http://localhost:3000/api/auth/login
 method: POST
 body:
   type: json
   content: |-
     {
-        "task" : "todo5",
-        "completed" : false
+        "email":"aditya@gmail.com",
+        "password":"Pass@123"
     }
 order: 4503566606317801
