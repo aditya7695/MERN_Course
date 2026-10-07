@@ -6,8 +6,8 @@ const App = () => {
   return (
     <div>
       {/* <Counter/> */}
-      {/* <InputFocus/> */}
-      <StopWatch/>
+      <InputFocus/>
+      {/* <StopWatch/> */}
     </div>
   )
 }
