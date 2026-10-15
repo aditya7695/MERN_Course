@@ -1,6 +1,6 @@
 $kind: http-request
 name: http://localhost:3000/todo
 description: ""
-url: http://localhost:3000/todo
+url: http://localhost:3000/
 method: GET
 order: 4487527492711413
